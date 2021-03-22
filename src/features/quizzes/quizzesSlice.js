@@ -10,10 +10,11 @@ export const quizzesSlice = createSlice({
     addQuiz: (state, action) => {
       const { quizId, name, topicId, cardIds } = action.payload;
       state.quizzes[quizId] = {
-        quizId: quizId,
+        cardIds: cardIds,
+        id: quizId,
         name: name,
-        topicId: topicId,
-        cardIds: cardIds
+        topicId: topicId
+        // cardIds: cardIds
       };
     }
   }
